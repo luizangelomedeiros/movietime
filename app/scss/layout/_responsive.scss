@@ -1,0 +1,193 @@
+/*  */
+@media screen and (min-width : 770px) and (max-width : 1200px) {
+  .container {
+      width: 980px;
+      margin-left: -490px;
+  }
+}
+
+@media screen and (max-width : 768px) {
+  .logo-mobile{
+    display: block;
+  }
+
+  .container {
+      width: 100%;
+      left: 0%;
+      margin-left: 0px;
+  }
+  
+  /*************
+     SOBRE MIM
+  **************/
+  .sobre-mim {
+    .sobre-mim__img{
+        order:0;
+        margin: 0 auto;
+        margin-bottom: 20px;
+    }
+    .sobre-mim__infos{
+        order:1;
+    }
+    .sobre-mim__texto {
+        font-size: 16px;
+    }
+  }
+  
+  .section .container-section{
+      flex-direction: column;
+      padding: 0px 40px;
+  }
+  
+  .flex {
+     flex-direction: column;
+  }
+
+  /*************
+       MENU
+  **************/
+  .menu{
+    .container-menu{
+      top: -380px;
+      flex-direction: column;
+      height: auto;
+      background: #262b37;
+      margin-top: 62px;
+      transition: all 0.3s;
+      &.mostrar{
+        top: 0px;
+      }
+    }
+    .menu-btn{
+      display: block;
+    }
+  }
+
+  .experiencias .experiencias__texto, 
+  .educacao .educacao__texto{
+      margin: 40px;
+      margin-bottom: 0px;
+      font-size: 15px;
+      padding: 22px 25px 10px 25px;
+      &:before{
+        left: 50%;
+        top: 0;
+        margin-left: -30px;
+        margin-top: -60px;
+        border-left: 30px solid transparent;
+        border-right: 30px solid transparent;
+        border-bottom: 30px solid #eaeaea;
+    }
+    .experiencias__tempo,
+    .educacao__tempo{
+      display: block;
+    }
+  }
+
+  .educacao .educacao__texto:before{
+        border-bottom: 30px solid #FFFFFF;    
+  }
+  
+  .habilidades {
+    .habilidades__graficos,
+    .habilidades__progress-bar{
+      width: 100%;
+      justify-content: center;
+    }
+    .habilidades__item{
+      margin: 0px auto 40px auto !important;      
+    }
+    .habilidades__progress-bar{
+      margin: 10%;
+      width: 80%;
+    }
+  }
+  
+  .contato{
+    margin: 0px 40px;
+    .contato__redes-sociais{
+        flex-direction: column;
+        .contato__redes-sociais-item{
+          margin-bottom: 40px;
+          &:last-child{
+            margin-bottom: 0px;
+          }
+        }
+    }
+    .contato__subtitle {
+        margin-bottom: 40px;
+    }
+  }
+
+}
+
+@media screen and (max-width : 399px) {
+  .sobre-mim .sobre-mim__img {
+    width: 250px !important;
+    height: 250px !important;
+    background-size: cover !important;
+    background-position: 0px 15% !important;
+  }
+
+  .menu-btn {
+    &.fechar .menu-btn-linhas:before,
+    &.fechar .menu-btn-linhas:after {
+        width: 38px;
+    }
+    .menu-btn-linhas {
+      width: 35px;
+      height: 5px;
+      &:before,
+      &:after{
+        width: 35px;
+        height: 5px;
+      }
+      &:after{
+        top: -9px;
+      }
+      &:before{
+        top: 9px;
+      }
+    }
+  }
+
+  .contato {
+      margin: 0px 20px;
+      .contato__redes-sociais-item div {
+        font-size: 13px;
+      }
+  }
+
+  .section {
+    padding: 60px 0;
+    .container-section {
+        padding: 0 20px;
+    }
+  }
+
+  .educacao .educacao__texto,
+  .experiencias .experiencias__texto {
+    margin: 40px 20px 0;
+  }
+
+  .sobre-mim {
+    padding-top: 100px;
+    .sobre-mim__texto {
+        font-size: 15px;
+    }
+  }
+
+  .logo-mobile {
+    font-size: 22px;
+  }
+
+  .footer {
+    line-height: 20px;
+    padding-top: 10px;
+    height: 80px;
+    .font-icon{
+      display: block;
+      margin: 4px 0px;
+    }
+  }
+}

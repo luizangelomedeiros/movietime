@@ -1,0 +1,484 @@
+body{
+	background:#EEEEEE;
+    color:#333333; 
+	font-family: 'Open Sans', sans-serif;
+    font-size: 14px;
+}
+
+::-webkit-scrollbar{
+	width:10px;
+	height:10px;
+	background:#FFFFFF;
+	border-radius:4px
+}
+
+::-webkit-scrollbar-thumb{
+	background-color:#1d6277
+}
+
+.container{
+	position: relative;
+	width: 1150px;
+	left: 50%;
+	margin-left:-575px;
+}
+
+.flex{
+	display: flex;
+}
+
+/*******************
+	    MENU
+********************/
+.logo-mobile{
+	display: none;
+    position: fixed;
+    z-index: 2;
+    color: #ffffff;
+    font-family: 'Catamaran', sans-serif;
+    font-weight: 900;
+    left: 10px;
+    font-size: 24px;
+    line-height: 62px;
+}
+
+.menu{
+	width: 100%;
+	height:62px;
+	background:#262b37;
+	color:#ffffff;	
+	position: fixed;
+	z-index:1;
+	.container-menu{
+		display: flex;
+	}
+	.menu-item{
+		width: 100%;
+		text-align: center;
+		height: 62px;
+		line-height:62px;
+		position: relative;
+		a{
+			color:#c3c8d6;
+			position: absolute;
+    		width: 100%;
+    		height: 100%;
+    		left: 0;
+			&:before{
+				font-size: 20px;
+				vertical-align: -2px;
+				margin-right:7px;
+			}
+		}
+		&:hover,
+		&.active{
+			background: #1b1f29;
+			a{
+				color:#FFFFFF;
+			}
+		}
+	}
+}
+
+.menu-btn.fechar {
+    transform: scale3d(0.8,0.8,0.8);
+}
+
+.menu-btn {
+    position: absolute;
+    right: 14px;
+    top: 22px;
+    padding: 0;
+    transition: .3s;
+    cursor: pointer;
+    user-select: none;
+    outline:none;
+    background:transparent;
+    border:0px;
+    display: none;
+    &.fechar {
+    	.menu-btn-linhas {
+	    	background: transparent;
+	    	&:before,
+			&:after {
+			    transform-origin: 50% 50%;
+			    top: 0;
+			    width: 50px;
+			}
+	    	&:before {
+			    transform: rotate3d(0,0,1,45deg);
+			}
+			&:after {
+			    transform: rotate3d(0,0,1,-45deg);
+			}
+		}   
+	} 
+	.menu-btn-linhas {
+	    display: inline-block;
+	    width: 44px;
+    	height: 6px;
+        background: #ecf0f1;
+	    border-radius: 0.28571rem;
+	    transition: 0.3s;
+	    position: relative;
+	    &:before,
+	    &:after {
+		    content: '';
+		    display: inline-block;
+		    width: 44px;
+    		height: 6px;
+		    background: #ecf0f1;
+		    border-radius: 0.28571rem;
+		    transition: 0.3s;
+		    position: absolute;
+		    left: 0;
+		    transform-origin: 0.28571rem center;
+		}
+		&:before {
+		    top: 12px;
+		}
+		&:after {
+		    top: -12px;
+		}
+	}
+}
+
+/*****************
+	 SECTION
+******************/
+.section{
+    padding: 90px 0px;
+	.section-title{
+		font-size: 36px;
+	    line-height: 38px;
+	    font-weight: 300;
+	    text-align:center;
+	    margin-bottom: 60px;
+	    position: relative;
+	    color: #1a596d;
+	    &:before{
+		    content: "";
+		    width: 70px;
+		    height: 4px;
+		    background: #2e93b3;		    
+		    position: absolute;
+		    bottom: -10px;
+		    left: 50%;
+		    margin-left: -35px;
+	    }
+	}
+	.container-section{
+		display:flex;
+	}
+}
+
+/****************
+	SOBRE MIM
+*****************/
+.sobre-mim{
+	background: #2e93b3;
+    color: #ffffff;
+    text-shadow: 1px 1px 1px #25687d;
+    padding-top:140px;
+    .section-title{
+    	color:#FFFFFF;
+    	&:before{
+    		background: #e4e4e4;    		
+    	}
+    }
+    .sobre-mim__nome{
+		font-size: 24px;
+		line-height: 30px;
+		padding-bottom: 6px;
+    }
+    .sobre-mim__profissao{
+		font-weight: 600;
+		font-size: 18px;
+		padding-bottom: 22px;
+    }
+    .sobre-mim__infos{
+		flex: 2 0;
+		margin-top:5px;
+    }
+    .sobre-mim__img{
+	    width: 300px;
+	    height: 300px;
+    	background:url("../images/img_sobremim.jpg");
+    	margin-left:80px;
+    	background-position: -32px -12px;
+    	border-radius:50%;
+    }
+    .sobre-mim__texto{
+    	margin-bottom:10px;
+    }
+}
+
+/****************
+   EXPERIÊNCIAS
+*****************/
+.experiencias,
+.educacao{
+	background:#FFFFFF;	
+	.experiencias-item,
+	.educacao-item{
+		align-items: center;
+		margin-bottom:40px;
+		&:nth-child(3){
+			margin-bottom:0px;
+		}
+	}
+	.experiencias__texto,
+	.educacao__texto{
+		position: relative;
+	    background: #eaeaea;
+	    border-bottom: solid 4px #eeeeee;
+	    padding: 22px 47px 6px 47px;
+	    margin-left: 55px;
+	    text-align: left;
+	    flex: 4 0;
+	    &:before{
+		    content: "";
+		    position: absolute;
+		    left: -30px;
+		    top: 50%;
+		    margin-top: -32px;
+		    border-top: 30px solid transparent;
+		    border-bottom: 30px solid transparent;
+		    border-right: 30px solid #eaeaea;
+		}
+	}
+	.experiencias__img,
+	.educacao__img{
+	    background-repeat: no-repeat !important;
+    	background-position: center center !important;
+	    width: 180px;
+    	height: 180px;
+	    @include border-radius(50%);
+	}
+	.experiencias__titulo,
+	.educacao__titulo{
+		font-size: 19px;
+    	line-height: 24px;
+    	font-weight:bold;
+	    color: #277f9a;
+	    display: inline;
+	}
+	.experiencias__tempo,
+	.educacao__tempo{
+		display: inline;
+    	color: #847272;
+	}
+	.experiencias__subtitulo,
+	.educacao__subtitulo{
+		font-size: 16px;
+		color: #474d5d;
+    	line-height: 30px;
+    	padding-bottom: 3px;
+	}
+	.experiencias__descricacao,
+	.educacao__descricacao{
+		color: #595a5f;
+   		line-height: 21px;
+    	padding-bottom: 20px;
+	}
+}
+
+#vipweb .experiencias__img{
+    background-color: #000;
+	background-image: url("../images/empresa_vw.jpg");	
+}
+
+#unimed .experiencias__img{
+    background-color: #009241;
+	background-image: url("../images/empresa_unimed.jpg");	
+}
+
+#volpato .experiencias__img{
+    background-color: #FFFFFF;
+	background-image: url("../images/empresa_volpato.jpg");	
+}
+
+/****************
+    EDUCAÇÃO
+*****************/
+.educacao{
+	background-color:#eaeaea;
+	.educacao__texto{
+		background-color: #FFFFFF;
+		&:before{
+			border-right: 30px solid #FFFFFF;
+		}
+	}
+}
+
+#ifsul-tspi .educacao__img,
+#ifsul-ti .educacao__img{
+    background-color: #FFFFFF;
+	background-image: url("../images/educacao_ifsul.jpg");	
+}
+
+#protasio .educacao__img{
+    background-color: #FFFFFF;
+	background-image: url("../images/educacao_protasio.jpg");
+}
+
+/******************
+	HABILIDADES
+*******************/
+.habilidades{
+	background:#FFFFFF;
+	.habilidades__title{
+		font-size: 16px;
+		font-weight: bold;
+		position: absolute;
+		bottom: -5px;
+		text-align: center;
+		width: 100%;
+	}
+	.habilidades__porcentagem {
+	    font-size: 21px;
+	    color: #474d5d;
+	    line-height: 152px;
+	    z-index: 2;
+	    &:after{
+	    	content:"%";
+	    }
+	}
+	.habilidades__graficos{
+		flex-wrap: wrap;
+		width: 60%;
+		justify-content: space-between;
+		.habilidades__item{
+		    position: relative;
+		    width: 180px;
+		    height: 180px;
+		    text-align: center;
+		    margin: 10px 0px 40px 0px;
+		    canvas {
+			    position: absolute;
+			    top: 0;
+			    left: 50%;
+			    margin-left: -76px;
+			}  
+		}	
+	}
+	.habilidades__progress-bar{
+		width:30%;
+		margin-left: auto;
+		.habilidades__progress-bar-item{
+			margin-bottom:40px;
+		}
+		.habilidades__progress-bar-label {
+		    font-size: 15px;
+		    font-weight: bold;
+		    margin-bottom: 10px;
+		}
+		.habilidades__progress-bar-background {
+			background-color: #f5f5f5;
+		 	border-color: #dfdfdf;
+			height: 10px;
+			margin-bottom: 24px;
+			border-radius: 0;
+			border-width: 1px;
+			border-style: solid;
+			box-shadow: none;
+			overflow: visible;
+		}
+		.habilidades__progress-bar-value{
+		    background-color: #2E93B3;
+		    border-color: #2E93B3;
+			border-width: 1px;
+			border-style: solid;
+			line-height: 8px;
+			position: relative;
+			box-shadow: none;
+			width: 0;
+			height: 100%;
+			font-size: 12px;
+			line-height: 20px;
+			color: #fff;
+			text-align: center;
+			box-shadow: inset 0 -1px 0 rgba(0,0,0,.15);
+			transition: width 1s;
+			span {
+				display: block;
+				width: 45px;
+				height: 45px;
+				line-height: 45px;
+				text-align: center;
+				font-weight: 300;
+				position: absolute;
+				top: -16px;
+				right: -20px;
+				border-width: 1px;
+				border-style: solid;
+				border-radius: 50%;
+				color: #000000;
+			    background: #fff;
+			    border-color: #d6d6d6;
+			}
+		}
+	}
+}
+
+/***************
+	CONTATO
+****************/
+.contato{
+	.contato__subtitle{
+		text-align:center;
+		font-weight:bold;
+		font-size: 16px;
+    	color: #666666;
+    	margin-bottom:80px;
+	}
+	.contato__redes-sociais{
+		display: flex;
+		justify-content: space-between;
+		.contato__redes-sociais-item {
+			text-align:center;
+			font-size:15px;
+			.font-icon{
+				font-size:44px;
+				color:#333333;
+				line-height: 50px;
+				&.icon-envelope{
+					font-size:38px;
+					color: #bb1010;
+				}
+				&.icon-linkedin-square{
+					color: #1683BC;
+				}				
+			    &.icon-skype{
+			    	color: #00AFF0;
+			    	font-size: 46px;
+			    }
+			}
+			a{
+				color:#666666;
+			}
+			div{
+				font-style:italic;
+			}
+		}
+	}
+}
+
+/*************
+	FOOTER
+**************/
+.footer{
+    line-height: 100px;
+    height: 100px;   
+    background: #1b1f29;
+    font-weight: bold;
+    text-align: center;
+    a{
+    	color: #FFFFFF;
+    }
+    .font-icon{
+	    color: #d60808;
+	    font-size: 22px;
+	    vertical-align: -4px;
+    }
+}
